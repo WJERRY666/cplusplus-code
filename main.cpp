@@ -63,9 +63,9 @@ void shell_sort(vector<int> arr)
     return;
 }
 
+//暴力匹配字符串搜索
 int strStr(string haystack, string needle)
 {
-    //暴力匹配字符串搜索
     if (needle.empty())
     {
         return 0;
@@ -129,6 +129,7 @@ vector<int> get_next(string p)
     return D;
 }
 
+//KMP字符串查找
 int kmp(string T, string P)
 {
     vector<int> next = get_next(P);
@@ -141,7 +142,7 @@ int kmp(string T, string P)
     {
         while (j < P.size())
         {
-            if(i==T.size())
+            if (i == T.size())
             {
                 return -1;
             }
